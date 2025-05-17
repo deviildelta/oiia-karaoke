@@ -381,7 +381,7 @@ function App() {
     const url = URL.createObjectURL(outputBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'karaoke_with_audio.mp4';
+    a.download = 'oiiaremix.mp4';
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -395,7 +395,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Karaoke Sequence Builder (Spinning Cat Oiia)</h1>
+      <h1>SPINNING CAT KAROIIAKE MAKER</h1>
       <label htmlFor="file-upload" className="custom-file-upload">
         Choose MP3 File
       </label>
@@ -711,7 +711,6 @@ function App() {
         ))}
       </div>
       <canvas ref={canvasRef} width="640" height="480" style={{ display: 'none' }} />
-      <button onClick={async () => await loadFFmpeg()}>Load FFmpeg</button>
     </div>
   );
 }
