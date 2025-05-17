@@ -1,0 +1,239 @@
+/* Define color variables for consistency */
+:root {
+    --primary-color: #3498db;
+    /* Blue for main actions */
+    --secondary-color: #2ecc71;
+    /* Green for add actions */
+    --background-color: #f5f5f5;
+    /* Light gray background */
+    --text-color: #333;
+    /* Dark text */
+    --edit-color: #f39c12;
+    /* Orange for edit */
+    --delete-color: #e74c3c;
+    /* Red for delete */
+    --auxiliary-color: #95a5a6;
+    /* Gray for secondary actions */
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+h2 {
+    color: var(--secondary-color);
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+/* Audio controls section */
+.audio-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.waveform-canvas {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.playback-speed {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.playback-speed span {
+    margin: 0 10px;
+}
+
+.rewind-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.rewind-buttons button {
+    margin: 0 5px;
+    background-color: var(--delete-color);
+}
+
+/* Sequences section */
+.sequences {
+    margin-top: 20px;
+}
+
+.sequence {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.item:nth-child(even) {
+    background-color: #f9f9f9;
+    /* Striped effect for readability */
+}
+
+/* Button styles */
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* Darker blue on hover */
+}
+
+.add-button {
+    background-color: var(--secondary-color);
+}
+
+.add-button:hover {
+    background-color: #27ae60;
+    /* Darker green */
+}
+
+.edit-button {
+    background-color: var(--edit-color);
+}
+
+.edit-button:hover {
+    background-color: #e67e22;
+    /* Darker orange */
+}
+
+.delete-button {
+    background-color: var(--delete-color);
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+    /* Darker red */
+}
+
+.use-current-time-button {
+    background-color: var(--auxiliary-color);
+    font-size: 12px;
+    padding: 3px 6px;
+}
+
+.use-current-time-button:hover {
+    background-color: #7f8c8d;
+    /* Darker gray */
+}
+
+.generate-video-button {
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.generate-video-button:hover {
+    background-color: #27ae60;
+}
+
+/* Form styles */
+.add-sequence-form,
+.edit-sequence-form,
+.add-item-form,
+.edit-item-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    margin-right: 10px;
+}
+
+.form-group input,
+.form-group select {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.sequence-container {
+    outline: 2px solid rgb(0, 255, 13);
+    border-radius: 10px;
+    background-color: rgb(0, 255, 13);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.sequence-container span {
+    font-size: 24px;
+    /* Much larger text; adjust as needed, e.g., 36px */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    /* #3498db from your :root */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: #2980b9;
+    /* Darker blue on hover */
+    align-items: center;
+    justify-content: center;
+}
